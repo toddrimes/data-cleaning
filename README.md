@@ -23,6 +23,19 @@ The features selected for this database are derived from the accelerometer and g
 1. STANDING
 1. LAYING
 
+**How the script works**
+[run_analysis.R](https://github.com/toddrimes/data-cleaning/blob/master/run_analysis.R) performs the following steps to produce the [tidy.txt](https://github.com/toddrimes/data-cleaning/blob/master/tidy.txt) file result.
+1. Extracts Mean and SD column names from the raw data.
+1. Extracts Mean and SD data from test data by column position.
+1. Assigns column names to test data.
+1. Extracts Mean and SD data from training data by column position.
+1. Assigns column names to training data.
+1. Merges the training and the test data into one data set.
+1. Uses descriptive activity names to name the activities in the data set.
+1. Melts the “wide” raw data into a “long” dataset
+1. Casts the “long” dataset back to “wide” to minimize repeated attributions by mean.
+1. Write the result file “tidy.txt”.
+
 **Code book**
 - subject	- subject to which each observation applies
 - activity - activity of the subject at the moment of measurement
